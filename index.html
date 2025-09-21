@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bhoi ki chai</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: yellow;
+            font-family: Arial;
+            font-size: 16px;
+        }
+        
+        h1 {
+            color: red;
+        }
+        
+        h2 {
+            color: blue;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bhoi ki chai</h1>
+    <p>Aaj chai tera bhoi pilayega!!</p>
+    
+    <!-- Navigation Buttons -->
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('menu')">Menu</button>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('contact')">Contact</button>
+    
+    <br><br>
+    
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <h1>Welcome!</h1>
+        
+        <!-- Inline CSS -->
+        <p style="background-color: pink; padding: 10px;">
+            Today Special: Chai + Samosa = 50 Rupees
+        </p>
+        
+        <h2>Why Choose Us?</h2>
+        <p>• Best chai in town</p>
+        <p>• Fresh tea every day</p>
+        <p>• Hot snacks available</p>
+        <p>• Good price</p>
+        <p>• We are not located on a footpath</p>
+        
+        <h2>What our customers say!!</h2>
+        <p>Anu bhai: Aag laga di! 🔥🔥</p>
+        <p>Salman bhai: hu.. Maza aagya 🤌🤌</p>
+        <p>Ajju bhai: Ata majhi satakli 😡😡</p>
+        
+        <!-- Inline CSS -->
+        <p style="color: red; font-size: 18px;">
+            Shop Open: 6 AM to 10 PM
+        </p>
+    </div>
+    
+    <!-- Menu Page -->
+    <div id="menu" class="page">
+        <h1>Our Menu</h1>
+        
+        <h2>Tea</h2>
+        
+        <p style="background-color: lightgreen;">
+            <strong>Masala Chai - 15 Rupees</strong><br>
+            Tea with spices
+        </p>
+        
+        <p style="background-color: lightblue;">
+            <strong>Ginger Chai - 18 Rupees</strong><br>
+            Tea with ginger
+        </p>
+        
+        <p style="background-color: lightyellow;">
+            <strong>Plain Chai - 12 Rupees</strong><br>
+            Simple milk tea
+        </p>
+        
+        <h2>Food</h2>
+        
+        <p style="background-color: lightcyan;">
+            <strong>Samosa - 25 Rupees</strong><br>
+            Fried snack with potato
+        </p>
+        
+        <p style="background-color: lightpink;">
+            <strong>Pakora - 30 Rupees</strong><br>
+            Fried vegetables
+        </p>
+        
+        <p style="background-color: orange; color: white; padding: 10px;">
+            Buy 5 chai get 1 free!
+        </p>
+    </div>
+    
+    <!-- About Page -->
+    <div id="about" class="page">
+        <h1>About Us</h1>
+        
+        <h2>Our Story</h2>
+        <p>I hit the streets in 2002, now I serve kadak chai..</p>
+        
+        <h2>Our People</h2>
+        
+        <!-- Inline CSS -->
+        <div style="background-color: lightgreen; padding: 10px;">
+            <h3>Kamlesh bhai - Owner</h3>
+            <p>Makes the best chai</p>
+        </div>
+        
+        <div style="background-color: lightblue; padding: 10px;">
+            <h3>Dhruv bhai- Helper</h3>
+            <p>Makes good snacks</p>
+        </div>
+        
+        <h2>What We Do Best</h2>
+        <p>✓ Fresh milk daily</p>
+        <p>✓ Good tea leaves</p>
+        <p>✓ Clean shop</p>
+        <p>✓ Nice people</p>
+        
+        <!-- Inline CSS -->
+        <p style="color: red; font-size: 20px; font-weight: bold;">
+            Best Tea Shop Award 2023!
+        </p>
+    </div>
+    
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <h1>Contact Us</h1>
+        
+        <h2>Send Message</h2>
+        
+        <form>
+            <p>Name: <input type="text" name="name"></p>
+            <p>Phone: <input type="text" name="phone"></p>
+            <p>Message: <textarea name="message"></textarea></p>
+            <button type="button" onclick="sendMessage()">Send</button>
+        </form>
+        
+        <h2>Find Us</h2>
+        
+        <!-- Inline CSS -->
+        <p style="background-color: yellow; padding: 5px;">
+            Address: Shop 15, Main Market
+        </p>
+        
+        <p style="background-color: lightgreen; padding: 5px;">
+            Phone: +91 85916 27130
+        </p>
+        
+        <p style="background-color: lightblue; padding: 5px;">
+            Email: bhoi@gmail.com
+        </p>
+        
+        <h2>Shop Hours</h2>
+        <p>Every day: 6 AM to 10 PM</p>
+        
+        <!-- Inline CSS -->
+        <p style="background-color: pink; color: red; padding: 10px;">
+            We never close! Come anytime!
+        </p>
+        
+        <h2>How to Come</h2>
+        <p>From bus stop: Walk 5 minutes</p>
+        <p>Ask anyone for "Bhoi ki chai"</p>
+    </div>
+    
+    <script>
+        function showPage(pageName) {
+            var pages = document.getElementsByClassName('page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            document.getElementById(pageName).classList.add('active');
+        }
+        
+        function sendMessage() {
+            alert('Thank you! We will call you!');
+        }
+    </script>
+</body>
+</html>
